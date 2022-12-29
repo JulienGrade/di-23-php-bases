@@ -1,7 +1,7 @@
 <?php
 
-$nomDuJoueur1 = "Matthieu";
-$age = 30;
+$nomDuJoueur1 = "Julien";
+$age = 39;
 echo "Nom Du joueur 1 : " . $nomDuJoueur1;
 echo "<br />";
 echo "age Du joueur 1 : " . $age;
