@@ -1,28 +1,23 @@
 <?php
-define ("SEPARATEUR", "-");
+const SEPARATOR = "-";
 
-$nomJoueur1 = "Julien";
-$ageJoueur1 = 20;
-$estUnHommeJoueur1 = true;
-
-$nomJoueur2 = "tata";
-$ageJoueur2 = 18;
-$estUnHommeJoueur2 = false;
+$joueur1 = ["Julien", 20, true];
+$joueur2 = ["tata", 18, false];
 
 genererSeparation(SEPARATOR);
-afficherJoueur($nomJoueur1, $ageJoueur1, $estUnHommeJoueur1);
+afficherJoueurV2($joueur1);
 genererSeparation(SEPARATOR);
-afficherJoueur($nomJoueur2, $ageJoueur2, $estUnHommeJoueur2);
+afficherJoueurV2($joueur2);
 genererSeparation(SEPARATOR);
 
-afficherJoueurLePlusAgee($ageJoueur1, $ageJoueur2);
+afficherJoueurLePlusAgee($joueur1[1], $joueur2[1]);
 genererSeparation(SEPARATOR);
-$differenceAge = calculDifferenceAge($ageJoueur1, $ageJoueur2);
+$differenceAge = calculDifferenceAge($joueur1[1], $joueur2[1]);
 echo "La difference d'age est de : ". $differenceAge;
 genererSeparation(SEPARATOR);
-afficherMajeur($ageJoueur1);
+afficherMajeur($joueur1[1]);
 genererSeparation(SEPARATOR);
-afficherMajeur($ageJoueur2);
+afficherMajeur($joueur2[1]);
 genererSeparation(SEPARATOR);
 
 function afficherJoueur ($nom, $age, $homme){
@@ -56,43 +51,14 @@ function calculDifferenceAge($age1, $age2){
 
 function genererSeparation($separateur){
     echo "<br />";
-    /*
-    for($i = 0 ; $i < 50; $i++){
+    for($i = 50 ; $i > 0; $i -=2 ){
         echo $separateur;
     }
     echo "<br/>";
-    */
-    /*
-    $i=0;
-    while ($i < 50){
-        $i++;
-        echo $separateur;
-    }*/
-    $i=0;
-    do{
-       $i++;
-       echo $separateur;
-    }while($i<50);
 }
 
 function afficherMajeur($age){
-
-    /*
-     * Ici on se rend compte que lorsqu'on veut tester de nombreuses valeurs on imbrique beaucoup de if
-     * On va donc utiliser le switch dans un cas comme celui-ci
-    if($age > 18){
-        echo "Il est majeur";
-    }elseif ($age === 18){
-        echo "Il est tout juste majeur";
-    }elseif($age > 12){
-        echo "Il est ado";
-    }else{
-        echo "C'est un enfant";
-    }
-    */
-
     switch($age){
-        // ici on fusionne le cas 21 20 et 19
         case 21 :
         case 20 :
         case 19 : echo "Il est majeur";
@@ -101,14 +67,18 @@ function afficherMajeur($age){
             break;
         case 17 : echo "Il est encore mineur";
             break;
-        // ici on fusionne le cas 10 et 16
         case 16:
         case 10 : echo "Il est mineur";
             break;
-        default : echo "Valeur non prévue";
+        default : echo "????";
             break;
     }
 }
 
+function afficherJoueurV2($tab){
+    foreach($tab as $indice => $value) {
+        echo $indice . ' : '. $value. '<br />';
+    }
+}
 
 ?>

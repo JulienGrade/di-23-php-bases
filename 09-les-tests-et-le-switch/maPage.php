@@ -9,21 +9,21 @@ $nomJoueur2 = "tata";
 $ageJoueur2 = 18;
 $estUnHommeJoueur2 = false;
 
-genererSeparation(SEPARATEUR);
+genererSeparation(SEPARATOR);
 afficherJoueur($nomJoueur1, $ageJoueur1, $estUnHommeJoueur1);
-genererSeparation(SEPARATEUR);
+genererSeparation(SEPARATOR);
 afficherJoueur($nomJoueur2, $ageJoueur2, $estUnHommeJoueur2);
-genererSeparation(SEPARATEUR);
+genererSeparation(SEPARATOR);
 
 afficherJoueurLePlusAgee($ageJoueur1, $ageJoueur2);
-genererSeparation(SEPARATEUR);
+genererSeparation(SEPARATOR);
 $differenceAge = calculDifferenceAge($ageJoueur1, $ageJoueur2);
 echo "La difference d'age est de : ". $differenceAge;
-genererSeparation(SEPARATEUR);
+genererSeparation(SEPARATOR);
 afficherMajeur($ageJoueur1);
-genererSeparation(SEPARATEUR);
+genererSeparation(SEPARATOR);
 afficherMajeur($ageJoueur2);
-genererSeparation(SEPARATEUR);
+genererSeparation(SEPARATOR);
 
 function afficherJoueur ($nom, $age, $homme){
     echo "Nom Du joueur : " . $nom;
