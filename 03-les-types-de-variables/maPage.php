@@ -2,6 +2,7 @@
 // Type string
 $firstname = "Julien";
 
+
 echo 'La variable $firstname contient '.$firstname.' et elle est de type '.gettype($firstname);
 
 // Type integer

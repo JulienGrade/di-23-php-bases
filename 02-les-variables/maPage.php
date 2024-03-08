@@ -9,4 +9,7 @@ echo "<br />";
 ++$age;
 echo "age Du joueur 1 : " . $age;
 
+// Le typage des variables
+$nomDujoueur2 = "John";
+
 ?>

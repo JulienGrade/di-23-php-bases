@@ -12,5 +12,7 @@
         <li class="nav-item"><a href="exo9.php">Exercice 9</a></li>
         <li class="nav-item"><a href="exo10.php">Exercice 10</a></li>
         <li class="nav-item"><a href="exo11.php">Exercice 11</a></li>
+        <li class="nav-item"><a href="exo12.php">Exercice 12</a></li>
     </ul>
 </nav>
+

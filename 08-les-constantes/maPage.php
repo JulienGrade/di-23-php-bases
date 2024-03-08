@@ -1,5 +1,5 @@
 <?php
-define ("SEPARATEUR", "-");
+define ("SEPARATOR", "-");
 
 $nomJoueur1 = "Julien";
 $ageJoueur1 = 39;
